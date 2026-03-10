@@ -35,7 +35,7 @@ export class Course {
   }
 
   get credits(): Credits {
-    return this._name;
+    return this._credits;
   }
 
   get capacity(): number {
