@@ -29,6 +29,7 @@ function main(): void {
 
   console.log("=== University Enrollment CLI ===\n");
 
+  console.log("Scenario 1: Successful enrollment");
   eventBus.emit({
     type: "StudentEnrolled",
     payload: {
@@ -40,6 +41,7 @@ function main(): void {
     },
   });
 
+  console.log("Scenario 2: Course reaches 80% capacity");
   eventBus.emit({
     type: "CourseCapacityReached",
     payload: {
@@ -50,6 +52,7 @@ function main(): void {
     },
   });
 
+  console.log("Scenario 3: Course becomes full");
   eventBus.emit({
     type: "CourseFull",
     payload: {
@@ -62,6 +65,7 @@ function main(): void {
   console.log("Enrollment failed: credit limit exceeded");
   console.log("");
 
+  console.log("Scenario 5: Cancel an enrollment");
   eventBus.emit({
     type: "EnrollmentCancelled",
     payload: {
